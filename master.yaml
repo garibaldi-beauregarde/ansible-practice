@@ -1,0 +1,25 @@
+# play 1
+- name: Configure the webservers
+  hosts: webservers
+  # become root user, can be set at play or task level
+  become: yes
+  # list of modules Ansible executes in a specific order
+  tasks:
+    # task 1
+    - name: Create a non-root user
+      user:
+        name: tjsoderl
+        state: present
+    # task 2
+    - name: Install nginx
+      package:
+        name: nginx
+        state: present
+# play 2
+- name: Configure the databases
+  hosts: databases
+  tasks:
+    - name: Install MySQL Server
+      package:
+        name: mysql-server
+        state: present

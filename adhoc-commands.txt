@@ -11,3 +11,6 @@ ansible -i inventory.ini -u root -m user -a "name=tjsoderl state=present" all
 # Install nginx package on hosts in webserver group
 # state=absent removes package
 ansible -i inventory.ini -u root -m package -a "name=nginx state=present" webservers
+
+# Ansible playbook command
+ansible-playbook master.yaml -i inventory.ini -u root
