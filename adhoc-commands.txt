@@ -14,3 +14,6 @@ ansible -i inventory.ini -u root -m package -a "name=nginx state=present" webser
 
 # Ansible playbook command
 ansible-playbook master.yaml -i inventory.ini -u root
+
+# Ansible playbook rewrite run, force add user johnd to see 'changed=1'
+ansible-playbook rewrite.yaml -i inventory.ini -u root
