@@ -1,7 +1,7 @@
 users:
   - username: tjsoderl
     state: present
-  - username: johnd
-    state: absent
+  - username: chrispbacon
+    state: present
   - username: superman
     state: present
