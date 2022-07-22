@@ -1,0 +1,13 @@
+# Use Ansible to ping everything in inventory file
+ansible -i inventory.ini -u root -m ping all
+
+# Use Ansible to ping hosts within webservers group
+ansible -i inventory.ini -u root -m ping webservers
+
+# Create user using user module with arguments to provide name and confirm state is present on all servers
+# state=absent removes user
+ansible -i inventory.ini -u root -m user -a "name=tjsoderl state=present" all
+
+# Install nginx package on hosts in webserver group
+# state=absent removes package
+ansible -i inventory.ini -u root -m package -a "name=nginx state=present" webservers

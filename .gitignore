@@ -1,0 +1,2 @@
+# Ignore inventory.ini to keep private IPs private
+inventory.ini

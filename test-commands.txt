@@ -1,5 +1,0 @@
-# Use Ansible to ping everything in inventory file
-ansible -i inventory.ini -u root -m ping all
-
-# Use Ansible to ping hosts within webservers group
-ansible -i inventory.ini -u root -m ping webservers
